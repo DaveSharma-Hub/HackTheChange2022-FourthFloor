@@ -70,6 +70,21 @@
         background-color: red;
         transition:0.5s ease-in-out;
     }
+    .used{
+        display:flex;
+        background-color:white;
+        border: 1px solid black;
+        margin: 25px 5px;
+        padding:15px 25px;
+        border-radius:5px;
+        cursor: pointer;
+    }
+
+    .used:hover{
+        color:white;
+        background-color: red;
+        transition:0.5s ease-in-out;
+    }
     @media screen and (max-width: 800px) {
         .logo{
             padding-right:0px;

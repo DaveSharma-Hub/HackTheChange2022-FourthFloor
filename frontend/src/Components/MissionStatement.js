@@ -9,7 +9,7 @@ function MissionStatement(){
                 </div>
                 <div className="statement_button">
                     <h2>Help Students Now!</h2>
-                    <button>Donate</button>
+                    <button onClick={()=>{}}>Donate</button>
                 </div>
             </div>
             <div className ="mission">
