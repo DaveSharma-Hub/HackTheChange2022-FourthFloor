@@ -7,26 +7,32 @@
         cursor: pointer;
         img{
             padding: 10px;
+            margin-top: 3px;
         }
     }
 
     .search{
+        display:flex;
         width:70%;
         margin:0px auto;
-        margin-left: 200px;
-        display:block;
+        margin-left: 100px;
+        margin-top:5px;
         padding-top: 25px;
 
         input{
+            display:flex;
             width:70%;
             border-radius: 10px;
             border: 2px solid black;
             height:50%;
         }
         button{
-            margin: 0px 25px;
-            padding:15px 25px;
-            border:none;
+            display:flex;
+            background-color:white;
+            border: 1px solid black;
+            margin: 0px 10px;
+            margin-bottom:25px;
+            padding:10px 10px;
             border-radius:5px;
             cursor: pointer;
         }
@@ -37,9 +43,11 @@
         }
     }
     .donate{
+        display:flex;
+        background-color:white;
+        border: 1px solid black;
         margin: 25px 5px;
-        padding:10px 25px;
-        border:none;
+        padding:15px 25px;
         border-radius:5px;
         cursor: pointer;
     }
@@ -49,9 +57,11 @@
         background-color: red;
     }
     .listings{
+        display:flex;
+        background-color:white;
+        border: 1px solid black;
         margin: 25px 5px;
-        padding:10px 25px;
-        border:none;
+        padding:15px 25px;
         border-radius:5px;
         cursor: pointer;
     }
@@ -60,4 +70,21 @@
         background-color: red;
         transition:0.5s ease-in-out;
     }
+    @media screen and (max-width: 800px) {
+        .logo{
+            padding-right:0px;
+            margin-right:0px;
+            img{
+                height:65%;
+                width:65%;
+            }
+            .header{
+                display:flex;
+                flex-direction:row;
+                flex-wrap:wrap;
+            }
+        }
+
+    }
+
 }
