@@ -4,8 +4,8 @@
 }
 
 .card{
-    border: 5px solid #555;
-    border-radius: 25px;
+    border: 5px solid rgb(228, 228, 228);
+    border-radius: 5px;
     width: 90%;
     margin-top: 5%;
     .progress{
@@ -14,6 +14,8 @@
         justify-content: center;
     }
     .itemimg{
+        width: 100%;
+        background-color: #B5838D;
         img{
             display: block;
             margin-left: auto;
@@ -40,6 +42,7 @@
         transition: 0.2s ease-in-out;
         background-color: red;
         color: white;
+        border:none;
 
     }
     .description{

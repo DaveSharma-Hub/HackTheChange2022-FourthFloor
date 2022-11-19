@@ -11,7 +11,7 @@ function Header(){
         <div className='header'>
             {
                 modal ?
-                <div className="modalHeader" style={{position:'absolute',top:'30%',left:'40%',zIndex:'1'}}>
+                <div className="modalHeader" style={{position:'fixed',top:'30%',left:'40%',zIndex:'1'}}>
                     <Donate setModal={setModal}/>
                 </div>
                 : null

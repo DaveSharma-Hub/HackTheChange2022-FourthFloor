@@ -6,11 +6,15 @@ function Donate({setModal}){
 
     return(
         <div className="donatePopup">
+                <h1>Donate Here!</h1>
                 <div className="firstToDisplay">
                     <button className="ListingDonatePage" onClick={()=>{history('/listings')}}>Donate to Listings!</button>
                     <button className="DonateWebsitePage" onClick={()=>{history('/donate')}}>Donate to Website!</button>
                 </div>
-                <button className="donatePageButtonCancel" onClick={()=>{setModal(false)}}>Cancel</button>
+                <div className="buffer"></div>
+                <div className="cancelDonate">
+                    <button className="donatePageButtonCancel" onClick={()=>{setModal(false)}}>Cancel</button>
+                </div>
         </div>
     )
 }
