@@ -1,3 +1,4 @@
+import Card from "../Components/Card";
 import Header from "../Components/Header";
 import './listing.scss';
 
@@ -14,13 +15,8 @@ function Listings(){
     return(
         <div className="listings">
             <Header />
-            <div className="listingCards">
-                {/* <Card /> */}
-                {
-                    [...Array(36)].map((item,index)=>{
-                        return <div>Card</div>
-                    })
-                }
+            <div>
+                <Card />
             </div>
         </div>
     )
