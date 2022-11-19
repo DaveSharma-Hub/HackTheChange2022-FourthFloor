@@ -6,40 +6,58 @@
     .logo{
         cursor: pointer;
         img{
-            
+            padding: 10px;
         }
     }
 
     .search{
         width:70%;
-        margin: 0 auto;
-        padding:10px 10px;
+        margin:0px auto;
+        margin-left: 200px;
+        display:block;
+        padding-top: 25px;
 
         input{
             width:70%;
             border-radius: 10px;
-            border: 1px solid black;
+            border: 2px solid black;
             height:50%;
         }
         button{
-            padding:10px 10px;
+            margin: 0px 25px;
+            padding:15px 25px;
             border:none;
             border-radius:5px;
             cursor: pointer;
         }
+        button:hover{
+            color:white;
+            background-color: red;
+            transition:0.5s ease-in-out;
+        }
     }
     .donate{
-        padding:10px 10px;
+        margin: 25px 5px;
+        padding:10px 25px;
         border:none;
         border-radius:5px;
         cursor: pointer;
-        height:50%;
+    }
+    .donate:hover{
+        color:white;
+        transition:0.5s ease-in-out;
+        background-color: red;
     }
     .listings{
-        padding:10px 10px;
+        margin: 25px 5px;
+        padding:10px 25px;
         border:none;
         border-radius:5px;
         cursor: pointer;
-        height:50%;
+    }
+    .listings:hover{
+        color:white;
+        background-color: red;
+        transition:0.5s ease-in-out;
     }
 }
