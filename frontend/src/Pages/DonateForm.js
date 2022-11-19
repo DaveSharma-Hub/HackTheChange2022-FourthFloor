@@ -1,7 +1,11 @@
 import Header from "../Components/Header";
 import './donateform.scss'
+import {useState} from 'react';
 
 function DonateForm(){
+    const [amount, setAmount] = useState(0);
+    const [name,setName] = useState('');
+
     return(
         <div>
             <Header />
@@ -13,11 +17,11 @@ function DonateForm(){
                     <form>
                         <h1>Donate to us! Make an online donation.</h1>
                         <form onSubmit={()=>{}}>
-                            <input placeholder="Name(optional)"/>
-                            <button>$5</button>
-                            <button>$20</button>
-                            <button>$40</button>
-                            <input placeholder="other amount($)" />
+                            <input placeholder="Name(optional)" onChange={(e)=>{setName(e.target.value)}}/>
+                            <button onClick={()=>{setAmount(5)}} type="button">$5</button>
+                            <button onClick={()=>{setAmount(20)}} type="button">$20</button>
+                            <button onClick={()=>{setAmount(40)}} type="button">$40</button>
+                            <input placeholder="other amount($)" type="number" value={amount} onChange={(e)=>{setAmount(e.target.ariaValueNow)}}/>
                             <button type="submit">Donate</button>
                         </form>
                     </form>
