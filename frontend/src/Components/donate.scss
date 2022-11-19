@@ -1,0 +1,47 @@
+.donate{
+    // width:'500px';
+    // height:'500px';
+    background-color: rgb(234, 234, 234);
+    position: relative;
+    justify-content:center;
+    align-items: center;
+        .firstToDisplay{
+            margin: 0 auto;
+            width: 100%;
+            .ListingDonatePage{
+                padding: 20px 20px;
+                background-color: white;
+                border: 2px solid red;
+                border-radius: 10px;
+                cursor: pointer;
+            }
+            .ListingDonatePage:hover{
+                background-color: red;
+                transition: 0.5s ease-in-out;
+                color:white;
+            }
+
+            .DonateWebsitePage{
+                padding: 20px 20px;
+                background-color: rgb(255, 0, 0);
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                color:white;
+            }
+            .DonateWebsitePage:hover{
+                
+            }
+        }
+
+        .donationForm_DonatePage{
+
+        }
+    .donatePageButtonCancel{
+        margin-top: 10px;
+        padding: 5px 5px;
+        background-color: black;
+        color:white;
+        cursor: pointer;        
+    }
+}
