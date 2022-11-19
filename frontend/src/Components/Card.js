@@ -3,15 +3,15 @@ import { useNavigate } from 'react-router-dom';
 import './card.scss';
 
 
-function Card(){
+function Card({data}){
     const history = useNavigate();
-    const data = {
-        img:"https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Calgary_Dinos_logo.svg/800px-Calgary_Dinos_logo.svg.png",
-        itemList:["Books","Pencils"],
-        total:"123",
-        progress:"54",
-        description:"Cool supplies and stuff and more stuff"
-    };
+    // const data = {
+    //     img:"https://upload.wikimedia.org/wikipedia/en/thumb/9/98/Calgary_Dinos_logo.svg/800px-Calgary_Dinos_logo.svg.png",
+    //     itemList:["Books","Pencils"],
+    //     total:"123",
+    //     progress:"54",
+    //     description:"Cool supplies and stuff and more stuff"
+    // };
     
     const percent = (parseFloat(data.progress)/parseFloat(data.total))*100;
     const percentString = percent.toString().split('.')[0]
