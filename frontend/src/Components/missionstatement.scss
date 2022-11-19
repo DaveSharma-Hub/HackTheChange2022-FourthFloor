@@ -84,14 +84,14 @@
 .about{
     display: flex;
     height: 250px;
-    h1{
+    .aboutUsPageHeader{
         background-color: rgb(184, 35, 35);
         color: white;
         height: 100%;
         width:  30%;
         text-align: center;
     }
-    .p{
+    .aboutUsPageParagraph{
         background-color: rgb(225, 71, 71);
         color: white;
         height: 100%;
