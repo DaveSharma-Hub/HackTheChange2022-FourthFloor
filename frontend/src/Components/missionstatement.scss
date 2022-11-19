@@ -1,30 +1,36 @@
 .missionstatement{
     display: flex;
-    background-color: black;
-    .missionstatement_image{
-        width:20%;
-        float:right;
-        text-align: center;
-        img{
-            width:100%;
-            height:100%;
-        }
+    overflow: hidden;
+    position: relative;
+    height:450px;
+
+    .missionstatement_video{
+        min-width: 100%;
+        min-height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
     }
 
     .statement_button{
-        background-color: black;
         font-family: sans-serif;
         font-weight: bold;
         font-size: 50px;
         text-align: center;
-        width:80%;
         padding: 0px 10px;
+        margin:auto;
         color:white;
+        // position: center;
+        // top:25%;
+        // left:75%;
+        z-index: 1;
         button{ 
             background-color: gold;
             height: 50px;
             width: 200px;
             padding:10px 10px;
+            margin-bottom:15px;
             color: red;
             font-size: 25px;
             font-family: sans-serif;
@@ -85,14 +91,14 @@
     display: flex;
     height: 250px;
     .aboutUsPageHeader{
-        background-color: rgb(184, 35, 35);
+        background-color: #B5838D;
         color: white;
         height: 100%;
         width:  30%;
         text-align: center;
     }
     .aboutUsPageParagraph{
-        background-color: rgb(225, 71, 71);
+        background-color: #FFCDB2;
         color: white;
         height: 100%;
         width:  70%;

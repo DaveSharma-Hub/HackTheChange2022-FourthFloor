@@ -1,11 +1,13 @@
 import './missionstatement.scss';
-
+import video from '../assets/samplevideo.mp4'
 function MissionStatement(){
     return(
         <div>
             <div className="missionstatement">
-                <div className="missionstatement_image">
-                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/UofCCoat.svg/1200px-UofCCoat.svg.png" alt="image"/>
+                <div className="missionstatement_video">
+                <video width= "100%;" height = "100%;" autoplay = "autoplay" muted loop>
+                    <source src= {video} type="video/mp4"/>
+                </video>
                 </div>
                 <div className="statement_button">
                     <h2>Help Students Now!</h2>
