@@ -1,14 +1,16 @@
 import Header from "../Components/Header";
 
-function Donate(){
+function DonateForm(){
     return(
         <div>
             <Header />
             <div>
-                Donate
+                <form>
+
+                </form>
             </div>
         </div>
     )
 }
 
-export default Donate;
+export default DonateForm;

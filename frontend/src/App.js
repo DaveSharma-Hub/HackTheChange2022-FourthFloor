@@ -2,7 +2,7 @@ import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './Pages/Home';
 import Listings from './Pages/Listings';
-import Donate from './Pages/Donate';
+import DonateForm from './Pages/DonateForm';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/listings" element={<Listings />}/>
-        <Route path="/donate" element={<Donate />}/>
+        <Route path="/donate" element={<DonateForm />}/>
       </Routes>
     </BrowserRouter>
   );

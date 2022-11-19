@@ -6,40 +6,85 @@
     .logo{
         cursor: pointer;
         img{
-            
+            padding: 10px;
+            margin-top: 3px;
         }
     }
 
     .search{
+        display:flex;
         width:70%;
-        margin: 0 auto;
-        padding:10px 10px;
+        margin:0px auto;
+        margin-left: 100px;
+        margin-top:5px;
+        padding-top: 25px;
 
         input{
+            display:flex;
             width:70%;
             border-radius: 10px;
-            border: 1px solid black;
+            border: 2px solid rgb(154, 139, 139);
             height:50%;
         }
         button{
+            display:flex;
+            background-color:white;
+            border: 1px solid black;
+            margin: 0px 10px;
+            margin-bottom:30px;
             padding:10px 10px;
-            border:none;
             border-radius:5px;
             cursor: pointer;
         }
+        button:hover{
+            color:white;
+            background-color: red;
+            transition:0.5s ease-in-out;
+        }
     }
     .donate{
-        padding:10px 10px;
-        border:none;
+        display:flex;
+        background-color:white;
+        border: 1px solid black;
+        margin: 25px 5px;
+        padding:15px 25px;
         border-radius:5px;
         cursor: pointer;
-        height:50%;
+    }
+    .donate:hover{
+        color:white;
+        transition:0.5s ease-in-out;
+        background-color: red;
     }
     .listings{
-        padding:10px 10px;
-        border:none;
+        display:flex;
+        background-color:white;
+        border: 1px solid black;
+        margin: 25px 5px;
+        padding:15px 25px;
         border-radius:5px;
         cursor: pointer;
-        height:50%;
     }
+    .listings:hover{
+        color:white;
+        background-color: red;
+        transition:0.5s ease-in-out;
+    }
+    @media screen and (max-width: 800px) {
+        .logo{
+            padding-right:0px;
+            margin-right:0px;
+            img{
+                height:65%;
+                width:65%;
+            }
+            .header{
+                display:flex;
+                flex-direction:row;
+                flex-wrap:wrap;
+            }
+        }
+
+    }
+
 }

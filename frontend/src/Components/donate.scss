@@ -1,0 +1,57 @@
+.donatePopup{
+    width:400px;
+    height:200px;
+    background-color: rgb(234, 234, 234);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    h1{
+        text-align: center;
+        color: red;
+    }
+        .firstToDisplay{
+            margin: 0 auto;
+            height: 30%;
+            width: 80%;
+            justify-content: space-around;
+            .ListingDonatePage{
+                padding: 20px 20px;
+                background-color: white;
+                border: 2px solid red;
+                border-radius: 10px;
+                cursor: pointer;
+                margin-left: 1%;
+            }
+            .ListingDonatePage:hover{
+                background-color: red;
+                transition: 0.5s ease-in-out;
+                color:white;
+            }
+            
+            .DonateWebsitePage{
+                margin-left: 1%;
+                padding: 20px 20px;
+                background-color: rgb(255, 0, 0);
+                border: none;
+                border-radius: 10px;
+                cursor: pointer;
+                color:white;
+            }
+            .DonateWebsitePage:hover{
+                
+            }
+        }
+
+    .buffer{
+        height:19%;
+    }
+    .cancelDonate{
+        height:10%;
+        .donatePageButtonCancel{
+            margin-top: 10px;
+            padding: 5px 5px;
+            background-color: black;
+            color:white;
+            cursor: pointer;        
+        }
+    }
+}

@@ -1,0 +1,89 @@
+/*** <--- CIRCLE STYLES ---> ***/
+.wrap-circles {
+
+}
+
+.card{
+    border: 5px solid rgb(228, 228, 228);
+    border-radius: 5px;
+    width: 90%;
+    margin-top: 5%;
+    .progress{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .itemimg{
+        width: 100%;
+        background-color: #B5838D;
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            margin-top: 10px;
+        }
+    }
+    .donate{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+        padding: 15px 32px;
+        border: solid #555;
+        border-radius:5px;
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .donate:hover{
+        transition: 0.2s ease-in-out;
+        background-color: red;
+        color: white;
+        border:none;
+
+    }
+    .description{
+        font-size: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    hr{
+        border: 5px solid #FFCDB2;
+        border-radius: 5px;
+    }
+
+}
+
+
+.circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0.5rem;
+    border-radius: 50%;
+    background: #FFCDB2;
+    overflow: hidden;
+  
+}
+.circle .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 115px;
+    height: 115px;
+    background: #000;
+    border-radius: 50%;
+    font-size: 1.85em;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.75);
+}
