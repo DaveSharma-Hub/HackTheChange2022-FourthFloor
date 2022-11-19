@@ -5,7 +5,7 @@ function Donate({setModal}){
     const history = useNavigate();
 
     return(
-        <div className="donate">
+        <div className="donatePopup">
                 <div className="firstToDisplay">
                     <button className="ListingDonatePage" onClick={()=>{history('/listings')}}>Donate to Listings!</button>
                     <button className="DonateWebsitePage" onClick={()=>{history('/donate')}}>Donate to Website!</button>

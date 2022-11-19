@@ -1,8 +1,9 @@
 .listings{
     .listingCards{
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto;
+        justify-content: space-around;
     }
 }

@@ -15,8 +15,13 @@ function Listings(){
     return(
         <div className="listings">
             <Header />
-            <div>
-                <Card />
+            <div className="listingCards">
+                {
+                    [...Array(26)].map((item,index)=>{
+                        return <Card key={index}/>
+                    })
+                
+                }
             </div>
         </div>
     )
