@@ -1,0 +1,16 @@
+.missionstatement{
+    display: flex;
+    background-color: black;
+    .missionstatement_image{
+        width:80%;
+        img{
+            width:50%;
+            height:fit-content;
+        }
+    }
+
+    .statement_button{
+        width:20%;
+        color:white;
+    }
+}
