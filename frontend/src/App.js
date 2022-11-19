@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './Pages/Home';
 import Listings from './Pages/Listings';
 import DonateForm from './Pages/DonateForm';
+import Used from './Pages/Used';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/listings" element={<Listings />}/>
         <Route path="/donate" element={<DonateForm />}/>
+        <Route path="/about" element={<Used />} />
       </Routes>
     </BrowserRouter>
   );
