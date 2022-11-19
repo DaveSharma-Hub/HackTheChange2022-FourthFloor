@@ -27,6 +27,7 @@ function Header(){
             </form>
             <button className='donate' onClick={()=>{setModal(!modal)}}>Donate</button>
             <button className='listings' onClick={()=>{history('/listings')}}>Listings</button>
+            <button className="used" onClick={()=>{history('/used')}}>Used</button>
         </div>
     )
 }
