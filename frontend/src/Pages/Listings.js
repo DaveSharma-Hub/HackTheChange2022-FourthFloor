@@ -1,3 +1,4 @@
+import Card from "../Components/Card";
 import Header from "../Components/Header";
 
 function Listings(){
@@ -5,7 +6,7 @@ function Listings(){
         <div>
             <Header />
             <div>
-                Listings
+                <Card />
             </div>
         </div>
     )
