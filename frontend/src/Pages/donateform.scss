@@ -1,0 +1,43 @@
+.donateForm{
+    display: flex;
+    background-color: white;
+    .donateImg{
+        height:100%;
+        width: 50%;
+        padding: 10px 10px;
+        img{
+            border-radius: 10px;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .form{
+        text-align: left;
+        input{
+            display:flex;
+            width:70%;
+            border-radius: 10px;
+            border: 2px solid red;
+            height:50px;
+        }
+        button{
+            border-radius: 10px;
+            border: none;
+            background-color: gold;
+            height: 50px;
+            width: 75px;
+            padding:10px 5px;
+            margin: 10px 10px;
+            color: red;
+            font-size: 15px;
+            font-family: sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: red; /* Green */
+            color: gold;
+            transition: 0.5s ease-in-out;
+        }
+    }
+}
