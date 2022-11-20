@@ -5,10 +5,27 @@ import Listings from './Pages/Listings';
 import DonateForm from './Pages/DonateForm';
 import listingData from './database';
 import UploadListing from './Pages/UploadListing';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 
 function App() {
-  const [data,setData] = useState(listingData);
+  // function callAPI(endpoint) {
+  //   fetch("http://localhost:8000"+endpoint, {method: 'GET'})
+  //       .then(res => {return res.json()});
+  // }
+
+  const [data,setData] = useState([listingData]);
+  
+  useEffect(() => {
+    fetch("http://localhost:8000/listings", {method: 'GET'})
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+          setData(data);
+        })
+        .catch((err) => {
+          console.log(err.message);
+       });
+  }, []);
 
   return (
     <BrowserRouter>
