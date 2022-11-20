@@ -5,10 +5,12 @@
 .card{
     border: 1px solid rgb(228, 228, 228);
     border-radius: 5px;
-    width: 100%;
+    width: 90%;
     margin-top: 5%;
     // height:fit-content;
     // background-color: #B5838D;
+    -webkit-box-shadow:2px 4px 10px 1px, rgba(0,0,0,0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.47);
     .progress{
         height:35%;
         display: flex;
@@ -45,20 +47,22 @@
             margin-right: auto;
             width: 75%;
             padding: 15px 32px;
-            border: solid #555;
+            border:1px solid #555;
             border-radius:5px;
             cursor: pointer;
-            background-color: #FFCDB2;
+            // background-color: #FFCDB2;
+            background-color: white;
             color: black;
             font-size: 10px;
             margin-bottom: 10px;
-            border:none;
+            // border:none;
         }
         .donateButtonCard:hover{
             transition: 0.2s ease-in-out;
             background-color: #B5838D;
             color: white;
             border:none;
+            border: 1px solid #B5838D;
     
         }
     }

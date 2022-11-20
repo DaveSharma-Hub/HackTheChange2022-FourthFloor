@@ -7,6 +7,13 @@ const listingData = [
         description:"TI-30XIIS Scientific Calculator"
     },
     {
+        id:11,
+        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXlulfEOI_lYMFkw2xeHw8K7nmmJbqMZoRXSqRbLdF&s",
+        total:"1000",
+        progress:"210",
+        description:"Macbook"
+    },
+    {
         id:2,
         img:"https://img.freepik.com/free-photo/desk-cluttered-with-office-supplies_93675-135114.jpg?w=2000",
         total:"123",
@@ -19,6 +26,20 @@ const listingData = [
         total:"150",
         progress:"10",
         description:"Calculus Textbook"
+    },
+    {
+        id:7,
+        img:"https://www.openculture.com/wp-content/uploads/2014/06/free-textbooks1.jpg",
+        total:"75",
+        progress:"0",
+        description:"History Textbook"
+    },
+    {
+        id:8,
+        img:"https://media.istockphoto.com/id/1258122517/photo/blue-school-backpack-isolated-on-white.jpg?s=612x612&w=0&k=20&c=9yj2IcljzBztWxHctbherQo5cuMXxhZJIfAM5ZKQ7yY=",
+        total:"35",
+        progress:"10",
+        description:"Backpack"
     },
     {
         id:4,
@@ -41,20 +62,7 @@ const listingData = [
         progress:"0",
         description:"Stethoscope"
     },
-    {
-        id:7,
-        img:"https://www.openculture.com/wp-content/uploads/2014/06/free-textbooks1.jpg",
-        total:"75",
-        progress:"0",
-        description:"History Textbook"
-    },
-    {
-        id:8,
-        img:"https://media.istockphoto.com/id/1258122517/photo/blue-school-backpack-isolated-on-white.jpg?s=612x612&w=0&k=20&c=9yj2IcljzBztWxHctbherQo5cuMXxhZJIfAM5ZKQ7yY=",
-        total:"35",
-        progress:"10",
-        description:"Backpack"
-    },
+    
     {
         id:9,
         img:"https://img.freepik.com/premium-vector/multicolored-highlighter-pen-marker-set-watercolor-vector-highlighters-clipart-marker-clipart_695709-87.jpg?w=2000",
@@ -68,13 +76,6 @@ const listingData = [
         total:"10",
         progress:"10",
         description:"Notebook"
-    },
-    {
-        id:11,
-        img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXlulfEOI_lYMFkw2xeHw8K7nmmJbqMZoRXSqRbLdF&s",
-        total:"1000",
-        progress:"210",
-        description:"Macbook"
     },
     {
         id:12,
