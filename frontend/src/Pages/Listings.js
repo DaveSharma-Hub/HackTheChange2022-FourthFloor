@@ -25,8 +25,8 @@ function Listings({listingData}){
             <div className="listingCards">
                 {
                     listingData.map((item,index)=>{
-                        console.log(item);
-                        if(url_params == "" || url_params == null || item.description.toString().toLowerCase().includes(url_params.toString().toLowerCase()))
+                        
+                        if(url_params == "" || url_params == null)
                         {
                             return <Card key={index} data={item}/>
                         }
