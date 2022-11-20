@@ -48,11 +48,8 @@ function Card({data}){
                     </h1>
                 </div>
             </div> */}
-            {/* <div className="donateDiv">
-                <button className='donateButtonCard' onClick={()=>{history(`/donate?id=${data.id}`)}}>Donate Here</button>
-            </div> */}
             <div className="donateDiv">
-                <button className='donateButtonCard' onClick={()=>{}}>View</button>
+                <button className='donateButtonCard' onClick={()=>{history(`/donate?id=${data.id}`)}}>Donate Here</button>
             </div>
         </div>
     )
