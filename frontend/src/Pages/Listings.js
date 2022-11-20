@@ -3,6 +3,7 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import { useSearchParams } from "react-router-dom";
 import { useState } from 'react';
+import {useNavigate} from 'react-router-dom'
 import axios from 'axios';
 import './listing.scss';
 // import listingData from '../database';
@@ -115,9 +116,14 @@ function Listings({listingData}){
 
     let url_params = searchParams.get('keyword');
     searchbook('Calculus');
+    const history = useNavigate();
     return(
         <div className="listings">
             <Header />
+            <div>
+                If there is a university-related item you would like funding for, Supplied! can try to make that happen. Submit 
+                <button onClick={()=>{history('/upload')}}> this form </button> to upload a listing.
+            </div>
             <div className="listingCards">
                 {
                     listingData.map((item,index)=>{

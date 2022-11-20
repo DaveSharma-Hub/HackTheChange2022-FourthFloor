@@ -4,6 +4,7 @@ import Home from './Pages/Home';
 import Listings from './Pages/Listings';
 import DonateForm from './Pages/DonateForm';
 import listingData from './database';
+import UploadListing from './Pages/UploadListing';
 import {useState} from 'react';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path="/listings" element={<Listings listingData={data}/>}/>
         <Route path="/donate" element={<DonateForm data={data} setData={setData}/>}/>
+        <Route path="/upload" element={<UploadListing data={data} setData={setData}/>}/>
         {/* <Route path="/used" element={<Used />} /> */}
       </Routes>
     </BrowserRouter>
