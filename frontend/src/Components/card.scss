@@ -3,10 +3,11 @@
 }
 
 .card{
-    border: 5px solid rgb(228, 228, 228);
+    border: 1px solid rgb(228, 228, 228);
     border-radius: 5px;
-    width: 90%;
+    width: 100%;
     margin-top: 5%;
+    // height:fit-content;
     // background-color: #B5838D;
     .progress{
         height:35%;
@@ -20,14 +21,20 @@
     }
     .itemimg{
         width: 100%;
-        background-color: #B5838D;
-        height:30%;
+        // background-color: #B5838D;
+        height:65%;
         img{
             display: block;
             margin-left: auto;
             margin-right: auto;
-            width: 50%;
-            margin-top: 10px;
+            // width:90%;
+            // height: fit-content;
+            // // width: 50%;
+            // margin-top: 10px;
+            width:  90%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5%;
         }
     }
     .donateDiv{
@@ -43,7 +50,7 @@
             cursor: pointer;
             background-color: white;
             color: black;
-            font-size: 15px;
+            font-size: 10px;
             margin-bottom: 10px;
         }
         .donateButtonCard:hover{
@@ -55,17 +62,28 @@
         }
     }
     .description{
-        height:14%;
+        height:20%;
+        width: 19vw;
+        min-height:20%;
         font-size: 10px;
         display: block;
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        .descriptionCard{
+            font-size: 15px;
+        }
+
+        .raised,.goal{
+            font-size: 12px;
+        }
     }
 
     hr{
         border: 5px solid #FFCDB2;
         border-radius: 5px;
+        width:10vw;
     }
 
 }
