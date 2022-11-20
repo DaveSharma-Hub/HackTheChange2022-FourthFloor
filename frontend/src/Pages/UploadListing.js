@@ -40,6 +40,26 @@ function UploadListing({data,setData}){
        return null;
     }
 
+    const addListings = async (body) => {
+        console.log(body);
+        await fetch('http://localhost:8000/listings', {
+            method: 'POST',
+            body: JSON.stringify(body),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+            .then((response) => response.json())
+            .then((new_list) => {
+                setData([...data,new_list]);
+                // setTitle('');
+                // setBody('');
+            })
+            .catch((err) => {
+                console.log(err.message);
+            });
+    };
+
     const handleUploadListing = async(e) =>{
         e.preventDefault();
         const tmpBook = searchbook(name);
@@ -52,7 +72,7 @@ function UploadListing({data,setData}){
                 progress:0,
                 description:bookData[0].title
             };
-            setData([...data,tmp]);
+            addListings(tmp);
             history('/');
         }
         else{
@@ -63,7 +83,7 @@ function UploadListing({data,setData}){
                 progress:0,
                 description:name
             };
-            setData([...data,tmp]);
+            addListings(tmp);
             history('/');
         }
     }
