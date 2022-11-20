@@ -1,8 +1,10 @@
 import Card from "../Components/Card";
 import Header from "../Components/Header";
 import './listing.scss';
+import { useSearchParams } from "react-router-dom";
 
 function Listings(){
+    let [searchParams, setSearchParams] = useSearchParams();
     const listingData = [
         {
             id:1,
@@ -97,13 +99,19 @@ function Listings(){
         },
     ];
 
+    let url_params = searchParams.get('keyword');
+
     return(
         <div className="listings">
             <Header />
             <div className="listingCards">
                 {
                     listingData.map((item,index)=>{
-                        return <Card key={index} data={item}/>
+                        if(url_params == "" || url_params == null || item.description.toLowerCase().includes(url_params.toLowerCase()))
+                        {
+                            return <Card key={index} data={item}/>
+                        }
+                        return null;
                     })
                 }
             </div>
