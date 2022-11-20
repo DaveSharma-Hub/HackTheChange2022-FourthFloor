@@ -4,7 +4,6 @@ import Footer from "../Components/Footer";
 import { useSearchParams } from "react-router-dom";
 import { useState } from 'react';
 import {useNavigate} from 'react-router-dom'
-import axios from 'axios';
 import './listing.scss';
 // import listingData from '../database';
 
@@ -107,15 +106,14 @@ function Listings({listingData}){
     // ];
 
 
-    const searchbook = (title) =>{
-        const url = `https://api.itbook.store/1.0/search/${title}`;
-        axios.get(url).then((response) => {
-            setBook(response.data.books);
-          });
-    }
+    // const searchbook = (title) =>{
+    //     const url = `https://api.itbook.store/1.0/search/${title}`;
+    //     axios.get(url).then((response) => {
+    //         setBook(response.data.books);
+    //       });
+    // }
 
     let url_params = searchParams.get('keyword');
-    searchbook('Calculus');
     const history = useNavigate();
     return(
         <div className="listings">

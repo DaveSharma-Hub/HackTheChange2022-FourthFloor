@@ -3,6 +3,7 @@ import Footer from "../Components/Footer";
 import './uploadlisting.scss'
 import {useState} from 'react';
 import {useNavigate, useSearchParams} from 'react-router-dom';
+import axios from 'axios';
 
 function UploadListing({data,setData}){
     const [amount, setAmount] = useState(5);
@@ -11,6 +12,8 @@ function UploadListing({data,setData}){
     const [clickedTwenty,setClickedTwenty] = useState(false);
     const [clickedFourty,setClickedFourty] = useState(false);
     const [searchParams, setSearchParams] = useSearchParams();
+    const [book, setBook] = useState('');
+
     let id = searchParams.get('id');
     const history = useNavigate();
 
@@ -18,6 +21,14 @@ function UploadListing({data,setData}){
         setState(true);
         setOther1(false);
         setOther2(false);
+    }
+    const searchbook = (title) =>{
+        const url = `https://api.itbook.store/1.0/search/${title}`;
+        axios.get(url).then((response) => {
+            console.log(response);
+            setBook(response.data.books);
+            console.log(book);
+          });
     }
 
     const getIndex = (data) =>{
@@ -32,24 +43,28 @@ function UploadListing({data,setData}){
 
     const handleUploadListing = (e) =>{
         e.preventDefault();
-        if(id===null){
-            alert('Thanks for making a listing!');
+        searchbook(name);
+
+        if(book){
+            const tmp = {
+                id:data.length+1,
+                img:book[0].image,
+                total:book[0].price,
+                progress:0,
+                description:book[0].title
+            };
+            setData([...data,tmp]);
             history('/');
         }else{
-            const tmp = data;
-            const index = getIndex(tmp);
-            console.log(index);
-            if(index!=null){
-                tmp[index].progress = parseInt(tmp[index].progress) + amount;
-                if(parseInt(tmp[index].progress)>parseInt(tmp[index].total)){
-                    tmp[index].progess = tmp[index].total;
-                }
-                setData(tmp);
-                alert('Thanks for making a listing!');
-                history('/');
-            }else{
-                alert('Try Again Please!');
-            }
+            const tmp = {
+                id:data.length+1,
+                img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXlulfEOI_lYMFkw2xeHw8K7nmmJbqMZoRXSqRbLdF&s",
+                total:amount,
+                progress:0,
+                description:name
+            };
+            setData([...data,tmp]);
+            history('/');
         }
     }
 
@@ -69,10 +84,7 @@ function UploadListing({data,setData}){
                         <form onSubmit={(e)=>{handleUploadListing(e)}}>
                             <input placeholder="Item Name" onChange={(e)=>{setName(e.target.value)}} autoComplete="off"/>
                             <input placeholder="Requested Price" type="number" value={amount} onChange={(e)=>{
-                                setAmount(e.target.ariaValueNow);
-                                setClickedFive(false);
-                                setClickedFourty(false);
-                                setClickedTwenty(false);
+                                setAmount(e.target.value);
                                 }}/>
                             <button type="submit">Upload</button>
                         </form>

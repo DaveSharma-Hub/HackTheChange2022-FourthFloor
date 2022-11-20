@@ -15,7 +15,7 @@ function MissionStatement(){
         <div>
             <div className="missionstatement">
                 <div className="missionstatement_video">
-                <video width= "100%;" height = "100%;" autoplay = "autoplay" muted loop>
+                <video width= "100%;" height = "100%;" autoplay = "autoPlay" muted loop>
                     <source src= {video} type="video/mp4"/>
                 </video>
                 </div>
