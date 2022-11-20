@@ -30,6 +30,7 @@ function MissionStatement(){
             </div>
             <hr />
             <div className='imagecard'>
+            <a className= "link" href = "/listings">
                     <Card sx={{ maxWidth: 345 }}>
                             <CardActionArea>
                                 <CardMedia
@@ -48,6 +49,8 @@ function MissionStatement(){
                                 </CardContent>
                             </CardActionArea>
                         </Card>
+                    </a>
+                    <a className= "link" href = "/listings">
                     <Card sx={{ maxWidth: 345 }}>
                         <CardActionArea>
                             <CardMedia
@@ -66,6 +69,8 @@ function MissionStatement(){
                             </CardContent>
                         </CardActionArea>
                     </Card>
+                    </a>
+                    <a className= "link" href = "/listings">
                     <Card sx={{ maxWidth: 345 }}>
                         <CardActionArea>
                             <CardMedia
@@ -84,6 +89,7 @@ function MissionStatement(){
                             </CardContent>
                         </CardActionArea>
                     </Card>
+                    </a>
                 </div>
             {/* <div className='footer'>
                 <div className='logo-footer'>
