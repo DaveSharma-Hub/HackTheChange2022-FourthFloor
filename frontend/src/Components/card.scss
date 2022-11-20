@@ -7,6 +7,7 @@
     border-radius: 5px;
     width: 90%;
     margin-top: 5%;
+    height:60vh;
     // height:fit-content;
     // background-color: #B5838D;
     -webkit-box-shadow:2px 4px 10px 1px, rgba(0,0,0,0.47);
@@ -56,6 +57,7 @@
             font-size: 10px;
             margin-bottom: 10px;
             // border:none;
+            //margin: 10px 0px;
         }
         .donateButtonCard:hover{
             transition: 0.2s ease-in-out;
@@ -63,11 +65,10 @@
             color: white;
             border:none;
             border: 1px solid #B5838D;
-    
         }
     }
     .description{
-        height:21%;
+        height:23%;
         width: 19vw;
         min-height:20%;
         font-size: 10px;
@@ -84,13 +85,6 @@
             font-size: 12px;
         }
     }
-
-    hr{
-        border: 5px solid #FFCDB2;
-        border-radius: 5px;
-        width:10vw;
-    }
-
 }
 
 

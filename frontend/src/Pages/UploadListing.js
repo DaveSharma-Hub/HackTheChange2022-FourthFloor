@@ -103,7 +103,7 @@ function UploadListing({data,setData}){
                         <h1>Make a listing.</h1>
                         <form onSubmit={(e)=>{handleUploadListing(e)}}>
                             <input placeholder="Item Name" onChange={(e)=>{setName(e.target.value)}} autoComplete="off"/>
-                            <input placeholder="UCID" onChange={(e)=>{setUCID(e.target.value)}} autoComplete="off" type="number"/>
+                            <input placeholder="UCID" onChange={(e)=>{setUCID(e.target.value)}} autoComplete="off" type="number" required/>
                             <input placeholder="Requested Price" type="number" value={amount} onChange={(e)=>{
                                 setAmount(e.target.value);
                                 }}/>
