@@ -39,7 +39,7 @@
         }
         button:hover{
             color:white;
-            background-color: red;
+            background-color: #B5838D;
             transition:0.5s ease-in-out;
         }
     }
@@ -55,7 +55,7 @@
     .donate:hover{
         color:white;
         transition:0.5s ease-in-out;
-        background-color: red;
+        background-color: #B5838D;
     }
     .listings{
         display:flex;
@@ -68,7 +68,7 @@
     }
     .listings:hover{
         color:white;
-        background-color: red;
+        background-color: #B5838D;
         transition:0.5s ease-in-out;
     }
     .used{
@@ -83,7 +83,7 @@
 
     .used:hover{
         color:white;
-        background-color: red;
+        background-color: #B5838D;
         transition:0.5s ease-in-out;
     }
     @media screen and (max-width: 800px) {
