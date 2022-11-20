@@ -32,15 +32,21 @@ function DonateForm({data,setData}){
 
     const handleSubmitDonation = (e) =>{
         e.preventDefault();
-        const tmp = data;
-        const index = getIndex(tmp);
-        console.log(index);
-        if(index!=null){
-            tmp[index].progress = parseInt(tmp[index].progress) + amount;
-            setData(tmp);
+        if(id===null){
+            alert('Thanks for the donation!');
             history('/');
         }else{
-            alert('Try Again Please!');
+            const tmp = data;
+            const index = getIndex(tmp);
+            console.log(index);
+            if(index!=null){
+                tmp[index].progress = parseInt(tmp[index].progress) + amount;
+                setData(tmp);
+                alert('Thanks for the donation!');
+                history('/');
+            }else{
+                alert('Try Again Please!');
+            }
         }
     }
 
@@ -57,7 +63,7 @@ function DonateForm({data,setData}){
                     <div >
                         <h1>Make an online donation.</h1>
                         <form onSubmit={(e)=>{handleSubmitDonation(e)}}>
-                            <input placeholder="Name(optional)" onChange={(e)=>{setName(e.target.value)}}/>
+                            <input placeholder="Name(optional)" onChange={(e)=>{setName(e.target.value)}} autoComplete="off"/>
                             <button className={clickedFive ? "clicked" : "notClicked"} 
                                 onClick={()=>{
                                     setAmount(5);
