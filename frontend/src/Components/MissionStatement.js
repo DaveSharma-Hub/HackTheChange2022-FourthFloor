@@ -1,6 +1,8 @@
 import './missionstatement.scss';
 import video from '../assets/samplevideo.mp4'
+import { useNavigate } from 'react-router-dom';
 function MissionStatement(){
+    const history = useNavigate();
     return(
         <div>
             <div className="missionstatement">
@@ -11,7 +13,7 @@ function MissionStatement(){
                 </div>
                 <div className="statement_button">
                     <h2>Help Students Now!</h2>
-                    <button onClick={()=>{}}>Donate</button>
+                    <button onClick={()=>{history('/donate')}}>Donate</button>
                 </div>
             </div>
             <div className ="mission">
