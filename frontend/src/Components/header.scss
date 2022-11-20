@@ -23,34 +23,36 @@
             display:flex;
             width:70%;
             border-radius: 10px;
-            border: 2px solid rgb(154, 139, 139);
+            border: 1px solid rgb(154, 139, 139);
             height:50%;
             font-size: 20px;
+            padding: 0px 10px;
         }
         button{
             display:flex;
             background-color:white;
-            border: 1px solid black;
+            border: 1px solid rgb(154, 139, 139);
             margin: 0px 10px;
             margin-bottom:30px;
             padding:10px 10px;
-            border-radius:5px;
+            border-radius:25%;
             cursor: pointer;
         }
         button:hover{
             color:white;
             background-color: #B5838D;
-            transition:0.5s ease-in-out;
+            transition:0.25s ease-in-out;
         }
     }
     .donate{
         display:flex;
         background-color:white;
-        border: 1px solid black;
+        border: 1px solid rgb(154, 139, 139);
         margin: 25px 5px;
         padding:15px 25px;
         border-radius:5px;
         cursor: pointer;
+        justify-content: center;
     }
     .donate:hover{
         color:white;
@@ -60,7 +62,7 @@
     .listings{
         display:flex;
         background-color:white;
-        border: 1px solid black;
+        border: 1px solid rgb(154, 139, 139);
         margin: 25px 5px;
         padding:15px 25px;
         border-radius:5px;
@@ -74,7 +76,7 @@
     .used{
         display:flex;
         background-color:white;
-        border: 1px solid black;
+        border: 1px solid rgb(154, 139, 139);
         margin: 25px 5px;
         padding:15px 25px;
         border-radius:5px;
