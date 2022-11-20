@@ -89,20 +89,21 @@
 
 .about{
     display: flex;
-    height: 250px;
+    height: 73px;
     .aboutUsPageHeader{
         background-color: #B5838D;
         color: white;
         height: 100%;
-        width:  30%;
+        width:  15%;
         text-align: center;
     }
     .aboutUsPageParagraph{
         background-color: #FFCDB2;
-        color: white;
+        color: #B5838D;
         height: 100%;
-        width:  70%;
-        text-align: center;
+        width:  85%;
+        text-align: left;
+        padding: 0px 10px;
     }
 
 }
