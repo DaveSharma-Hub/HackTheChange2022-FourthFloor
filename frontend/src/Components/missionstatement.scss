@@ -26,12 +26,12 @@
         // left:75%;
         z-index: 1;
         button{ 
-            background-color: gold;
+            background-color: #FFCDB2;
             height: 50px;
             width: 200px;
             padding:10px 10px;
             margin-bottom:15px;
-            color: red;
+            color: maroon;
             font-size: 25px;
             font-family: sans-serif;
             font-weight: bold;
@@ -40,8 +40,8 @@
             cursor: pointer;
         }
         button:hover {
-            background-color: red; /* Green */
-            color: gold;
+            background-color: #B5838D; /* Green */
+            color: white;
             transition: 0.5s ease-in-out;
         }
     }
@@ -65,7 +65,7 @@
         content:" ";
         height: 5px;
         width: 150px;
-        background: red;
+        background: #B5838D;
         display: block;
         position: absolute;
         top: 50%;
@@ -76,7 +76,7 @@
         content:" ";
         height: 5px;
         width: 150px;
-        background: red;
+        background: #B5838D;
         display: block;
         position: absolute;
         top: 50%;
@@ -89,20 +89,21 @@
 
 .about{
     display: flex;
-    height: 250px;
+    height: 73px;
     .aboutUsPageHeader{
         background-color: #B5838D;
         color: white;
         height: 100%;
-        width:  30%;
+        width:  15%;
         text-align: center;
     }
     .aboutUsPageParagraph{
         background-color: #FFCDB2;
-        color: white;
+        color: #B5838D;
         height: 100%;
-        width:  70%;
-        text-align: center;
+        width:  85%;
+        text-align: left;
+        padding: 0px 10px;
     }
 
 }
