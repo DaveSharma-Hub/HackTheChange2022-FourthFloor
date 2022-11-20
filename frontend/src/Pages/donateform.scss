@@ -43,5 +43,24 @@
             color: white;
             transition: 0.5s ease-in-out;
         }
+        .clicked{
+            border-radius: 10px;
+            border: none;
+            background-color: #B5838D;
+            border: 1px solid black;
+            height: 50px;
+            width: 75px;
+            padding:10px 5px;
+            margin: 10px 10px;
+            color: white;
+            font-size: 15px;
+            font-family: sans-serif;
+            cursor: pointer;
+        }
+        .clicked:hover{
+            background-color: #B5838D; /* Green */
+            color: white;
+            transition: 0.5s ease-in-out;
+        }
     }
 }

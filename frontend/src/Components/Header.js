@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import './header.scss';
 import websiteLogo from '../assets/logo.png';
 import Donate from './Donate';
+import {AiOutlineSearch,AiOutlineUnorderedList} from 'react-icons/ai';
+import {BiDonateHeart} from 'react-icons/bi';
 
 function Header(){
     const history = useNavigate();
@@ -24,11 +26,11 @@ function Header(){
             </div>
             <form className='search'>
                 <input />
-                <button type="submit">Search</button>
+                <button type="submit"><AiOutlineSearch size={20}/></button>
             </form>
-            <button className='donate' onClick={()=>{history('/donate')}}>Donate</button>
-            <button className='listings' onClick={()=>{history('/listings')}}>Listings</button>
-            <button className="used" onClick={()=>{history('/used')}}>Used</button>
+            <button className='donate' onClick={()=>{history('/donate')}}><BiDonateHeart size={20}/>Donate</button>
+            <button className='listings' onClick={()=>{history('/listings')}}><AiOutlineUnorderedList size={20}/>Listings</button>
+            {/* <button className="used" onClick={()=>{history('/used')}}>Used</button> */}
         </div>
     )
 }

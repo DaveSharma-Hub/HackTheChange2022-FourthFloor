@@ -3,8 +3,18 @@ import './donateform.scss'
 import {useState} from 'react';
 
 function DonateForm(){
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState(5);
     const [name,setName] = useState('');
+    const [clickedFive,setClickedFive] = useState(true);
+    const [clickedTwenty,setClickedTwenty] = useState(false);
+    const [clickedFourty,setClickedFourty] = useState(false);
+
+
+    const handleSetClicked = (setState,setOther1,setOther2) =>{
+        setState(true);
+        setOther1(false);
+        setOther2(false);
+    }
 
     return(
         <div>
@@ -15,13 +25,28 @@ function DonateForm(){
                 </div>
                 <div className = "form">
                     <form>
-                        <h1>Donate to us! Make an online donation.</h1>
+                        <h1>Make an online donation.</h1>
                         <form onSubmit={()=>{}}>
                             <input placeholder="Name(optional)" onChange={(e)=>{setName(e.target.value)}}/>
-                            <button onClick={()=>{setAmount(5)}} type="button">$5</button>
-                            <button onClick={()=>{setAmount(20)}} type="button">$20</button>
-                            <button onClick={()=>{setAmount(40)}} type="button">$40</button>
-                            <input placeholder="other amount($)" type="number" value={amount} onChange={(e)=>{setAmount(e.target.ariaValueNow)}}/>
+                            <button className={clickedFive ? "clicked" : "notClicked"} 
+                                onClick={()=>{
+                                    setAmount(5);
+                                    handleSetClicked(setClickedFive,setClickedTwenty,setClickedFourty);
+                            }} type="button">$5</button>
+                            <button className={clickedTwenty ? "clicked" : "notClicked"} onClick={()=>{
+                                setAmount(20);
+                                handleSetClicked(setClickedTwenty,setClickedFive,setClickedFourty);
+                                }} type="button">$20</button>
+                            <button className={clickedFourty ? "clicked" : "notClicked"} onClick={()=>{
+                                setAmount(40);
+                                handleSetClicked(setClickedFourty,setClickedFive,setClickedTwenty);
+                                }} type="button">$40</button>
+                            <input placeholder="other amount($)" type="number" value={amount} onChange={(e)=>{
+                                setAmount(e.target.ariaValueNow);
+                                setClickedFive(false);
+                                setClickedFourty(false);
+                                setClickedTwenty(false);
+                                }}/>
                             <button type="submit">Donate</button>
                         </form>
                     </form>
