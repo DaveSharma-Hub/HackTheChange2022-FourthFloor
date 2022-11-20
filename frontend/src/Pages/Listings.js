@@ -1,12 +1,16 @@
 import Card from "../Components/Card";
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
-import './listing.scss';
 import { useSearchParams } from "react-router-dom";
+import { useState } from 'react';
+import axios from 'axios';
+import './listing.scss';
 // import listingData from '../database';
 
 function Listings({listingData}){
     let [searchParams, setSearchParams] = useSearchParams();
+    const [book, setBook] = useState('');
+
     // const listingData = [
     //     {
     //         id:1,
@@ -101,8 +105,16 @@ function Listings({listingData}){
     //     },
     // ];
 
-    let url_params = searchParams.get('keyword');
 
+    const searchbook = (title) =>{
+        const url = `https://api.itbook.store/1.0/search/${title}`;
+        axios.get(url).then((response) => {
+            setBook(response.data.books);
+          });
+    }
+
+    let url_params = searchParams.get('keyword');
+    searchbook('Calculus');
     return(
         <div className="listings">
             <Header />
