@@ -41,6 +41,9 @@ function DonateForm({data,setData}){
             console.log(index);
             if(index!=null){
                 tmp[index].progress = parseInt(tmp[index].progress) + amount;
+                if(parseInt(tmp[index].progress)>parseInt(tmp[index].total)){
+                    tmp[index].progess = tmp[index].total;
+                }
                 setData(tmp);
                 alert('Thanks for the donation!');
                 history('/');
@@ -50,8 +53,12 @@ function DonateForm({data,setData}){
         }
     }
 
-
-
+    let percentString;
+    const donation = data[getIndex(data)];
+    if(donation){
+        const percent = (parseFloat(donation.progress)/parseFloat(donation.total))*100;
+        percentString = percent.toString().split('.')[0];
+    }
     return(
         <div>
             <Header />
@@ -87,6 +94,56 @@ function DonateForm({data,setData}){
                         </form>
                     </div>
                 </div>
+                {
+                    id!==null ?
+                    <div className="donationCardItem">
+                    <div className='card'>
+                        <div className='itemimg'>
+                            <img src = {donation && donation.img}></img>
+                        </div>
+                        <div className='description'>
+                            <h1 className="descriptionCard">
+                                {donation &&donation.description}
+                            </h1>
+                            <h1 className='raised'>
+                                ${donation && donation.progress} raised
+                            </h1>
+                                {/* <h1>
+                                • 
+                                </h1> */}
+                            <hr />
+                            <h1 className='goal'>
+                                ${donation && donation.total} goal
+                            </h1>
+                        </div>
+                        <div className="progress">
+                            <div className='progressbar'>
+                                <div class="wrap-circles">
+                                    {
+                                        percentString ?
+                                        <div class="circle" style={{backgroundImage: `conic-gradient(#B5838D ${percentString}%, #FFCDB2 0)`}}>
+                                            <div class="inner">{donation && percentString}%</div>
+                                        </div>
+                                        : null
+                                    }
+                                </div>
+                            </div>
+                            <div className='progresstext'>
+                                <h1>
+                                    ${donation.progress} raised
+                                </h1>
+                                
+                                <hr />
+                                <h1>
+                                ${donation.total} goal
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    :
+                    null
+                }
             </div>
             <Footer />
         </div>

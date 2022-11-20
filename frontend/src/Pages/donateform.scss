@@ -16,7 +16,9 @@
     .form{
         text-align: left;
         font-weight: bolder;
-
+        h1{
+            color:grey;
+        }
         input{
             display:flex;
             width:70%;
@@ -64,5 +66,9 @@
             color: white;
             transition: 0.5s ease-in-out;
         }
+    }
+
+    .donationCardItem{
+        width:30%;
     }
 }
