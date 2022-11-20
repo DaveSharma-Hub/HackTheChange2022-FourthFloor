@@ -26,8 +26,9 @@ function UploadListing({data,setData}){
         const url = `https://api.itbook.store/1.0/search/${title}`;
         axios.get(url).then((response) => {
             console.log(response);
-            setBook(response.data.books);
-            console.log(book);
+            // response.data.books;
+            setBook(response);
+            // console.log(book);
           });
     }
 
@@ -44,14 +45,15 @@ function UploadListing({data,setData}){
     const handleUploadListing = (e) =>{
         e.preventDefault();
         searchbook(name);
-
-        if(book){
+        const bookData = book?.data?.books;
+        console.log(bookData);
+        if(bookData){
             const tmp = {
                 id:data.length+1,
-                img:book[0].image,
-                total:book[0].price,
+                img:bookData[0].image,
+                total:bookData[0].price,
                 progress:0,
-                description:book[0].title
+                description:bookData[0].title
             };
             setData([...data,tmp]);
             history('/');
