@@ -1,5 +1,6 @@
 import Card from "../Components/Card";
 import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 import './listing.scss';
 import { useSearchParams } from "react-router-dom";
 // import listingData from '../database';
@@ -116,6 +117,7 @@ function Listings({listingData}){
                     })
                 }
             </div>
+            <Footer />
         </div>
     )
 }

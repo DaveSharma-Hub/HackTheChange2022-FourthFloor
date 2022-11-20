@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from '../Components/Header';
 import MissionStatement from '../Components/MissionStatement';
+import Footer from '../Components/Footer';
 
 
 function Home(){
@@ -10,6 +11,7 @@ function Home(){
              <div>
                 <MissionStatement />
              </div>
+             <Footer />
         </div>
     )
 }
