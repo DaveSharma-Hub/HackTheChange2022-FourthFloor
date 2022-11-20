@@ -24,8 +24,8 @@ function Header(){
                 <img src = {websiteLogo} alt=""/>
                 </a>
             </div>
-            <form className='search'>
-                <input />
+            <form className='search' action="/listings">
+                <input type="text" id="keyword" name="keyword"/>
                 <button type="submit"><AiOutlineSearch size={20}/></button>
             </form>
             <button className='donate' onClick={()=>{history('/donate')}}><BiDonateHeart size={20}/>Donate</button>
