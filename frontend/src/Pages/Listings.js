@@ -121,8 +121,10 @@ function Listings({listingData}){
         <div className="listings">
             <Header />
             <div>
-                If there is a university-related item you would like funding for, Supplied! can try to make that happen. Submit 
-                <button onClick={()=>{history('/upload')}}> this form </button> to upload a listing.
+                <p>
+                    If there is a university-related item you would like funding for, Supplied! can try to make that happen. Submit 
+                    <button className = "uploadBtn" onClick={()=>{history('/upload')}}> this form </button> to upload a listing.
+                </p>
             </div>
             <div className="listingCards">
                 {
