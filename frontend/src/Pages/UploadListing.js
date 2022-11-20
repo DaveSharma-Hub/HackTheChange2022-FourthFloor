@@ -13,6 +13,7 @@ function UploadListing({data,setData}){
     const [clickedFourty,setClickedFourty] = useState(false);
     const [searchParams, setSearchParams] = useSearchParams();
     const [book, setBook] = useState('');
+    const [UCID,setUCID] = useState();
 
     let id = searchParams.get('id');
     const history = useNavigate();
@@ -24,11 +25,8 @@ function UploadListing({data,setData}){
     }
     const searchbook = (title) =>{
         const url = `https://api.itbook.store/1.0/search/${title}`;
-        axios.get(url).then((response) => {
-            console.log(response);
-            // response.data.books;
-            setBook(response);
-            // console.log(book);
+        axios.get(url).then(response => {
+            return response.data;
           });
     }
 
@@ -42,11 +40,10 @@ function UploadListing({data,setData}){
        return null;
     }
 
-    const handleUploadListing = (e) =>{
+    const handleUploadListing = async(e) =>{
         e.preventDefault();
-        searchbook(name);
-        const bookData = book?.data?.books;
-        console.log(bookData);
+        const tmpBook = searchbook(name);
+        const bookData = tmpBook?.data?.books;
         if(bookData){
             const tmp = {
                 id:data.length+1,
@@ -57,7 +54,8 @@ function UploadListing({data,setData}){
             };
             setData([...data,tmp]);
             history('/');
-        }else{
+        }
+        else{
             const tmp = {
                 id:data.length+1,
                 img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXlulfEOI_lYMFkw2xeHw8K7nmmJbqMZoRXSqRbLdF&s",
@@ -69,7 +67,7 @@ function UploadListing({data,setData}){
             history('/');
         }
     }
-
+    console.log(searchbook('Calc'));
     let percentString;
     const donation = data[getIndex(data)];
     if(donation){
@@ -85,6 +83,7 @@ function UploadListing({data,setData}){
                         <h1>Make a listing.</h1>
                         <form onSubmit={(e)=>{handleUploadListing(e)}}>
                             <input placeholder="Item Name" onChange={(e)=>{setName(e.target.value)}} autoComplete="off"/>
+                            <input placeholder="UCID" onChange={(e)=>{setUCID(e.target.value)}} autoComplete="off" type="number"/>
                             <input placeholder="Requested Price" type="number" value={amount} onChange={(e)=>{
                                 setAmount(e.target.value);
                                 }}/>
