@@ -24,7 +24,8 @@ function Card({data}){
                     {/* <h1>
                     • 
                     </h1> */}
-                <hr />
+                <progress value = {data.progress} max = {data.total}>
+                </progress>
                 <h1 className='goal'>
                     ${data.total} goal
                 </h1>
