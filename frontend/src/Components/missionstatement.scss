@@ -25,6 +25,8 @@
         // top:25%;
         // left:75%;
         z-index: 1;
+        text-shadow: 2px 2px 0 #000;
+
         button{ 
             background-color: #FFCDB2;
             height: 50px;
@@ -46,7 +48,6 @@
         }
     }
 }
-
 
 .mission{
     background-color: white;
