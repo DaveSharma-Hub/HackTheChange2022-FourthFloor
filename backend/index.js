@@ -1,4 +1,5 @@
 const express = require('express');
+bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
 const PORT = 8000;
@@ -100,12 +101,18 @@ const listingData = [
     },
 ];
 
+app.use(bodyParser.json());
+
 app.get('/listings',(req,res)=>{
-    res.send(listingData);
+    console.log('/listings called');
+    res.json(listingData);
 })
 
-app.post('/addListings',(req,res)=>{
-    
+app.post('/listings',(req,res)=>{
+    console.log('/listings post called')
+    console.log(req.body);
+    listingData.push(req.body);
+    res.json(req.body);
 })
 
 
