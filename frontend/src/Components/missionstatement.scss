@@ -89,7 +89,9 @@
 
 .about{
     display: flex;
-    height: 73px;
+    // position: fixed;
+    // bottom: 0;
+    height: 15vh;
     .aboutUsPageHeader{
         background-color: #B5838D;
         color: white;
