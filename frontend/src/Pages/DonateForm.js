@@ -1,4 +1,5 @@
 import Header from "../Components/Header";
+import Footer from "../Components/Footer";
 import './donateform.scss'
 import {useState} from 'react';
 import {useNavigate, useSearchParams} from 'react-router-dom';
@@ -81,6 +82,7 @@ function DonateForm({data,setData}){
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }
