@@ -8,12 +8,21 @@ Online web application named Supplied! designed within 24 hours for the HackTheC
 
 **Sample Screenshots**
 
-<div display="flex" justify-content="center" position="relative">
+<p align="center">
   <img width="500" height="300" src="https://user-images.githubusercontent.com/81478885/202954215-e73f12c9-073f-4ff0-901d-c83644d3eec7.png">
-  <img width="500" height="300" src="https://user-images.githubusercontent.com/81478885/202955057-4a7e3aab-6d99-4a23-9f99-11aa0e5a9361.png">
-  <img width="500" height="300" src="https://user-images.githubusercontent.com/81478885/202955320-c1c917fe-dbe8-4bd9-9355-76eb1239606b.png">
+</p>
+
+<p align="center">
+  <img width="500" height="300" src="https://user-images.githubusercontent.com/81478885/202955057-4a7e3aab-6d99-4a23-9f99-11aa0e5a9361.png">  
+</p>
+
+<p align="center">
+    <img width="500" height="300" src="https://user-images.githubusercontent.com/81478885/202955320-c1c917fe-dbe8-4bd9-9355-76eb1239606b.png">
+</p>
+
+<p align="center">
   <img width="500" height="300" src="https://user-images.githubusercontent.com/81478885/202955431-d742a96c-5619-451e-93b7-f815558dce1b.png">
-</div>
+</p>
 
 # Usage
 Clone repository
